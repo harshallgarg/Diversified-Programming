@@ -1,4 +1,4 @@
-# Diversified-Programming
+# Diversified Programming
 One Repository for all (School, College, Competitive)
 <br>Contains various code covering numerous topics. Please search using camelCase without space.
 <br>Programming Languages include C, C++ and Python.
