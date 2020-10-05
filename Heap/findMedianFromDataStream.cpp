@@ -11,46 +11,15 @@ public:
 
     void addNum(int num)
     {
-        if (lower.size() > higher.size())
+        lower.push(num);
+
+        higher.push(lower.top());
+        lower.pop();
+
+        if (lower.size() < higher.size())
         {
-            if (number < median)
-            {
-                higher.push(lower.top());
-                lower.pop();
-                lower.push(number);
-            }
-            else
-            {
-                higher.push(number);
-            }
-            // median = (lower.top() + higher.top()) / 2;
-        }
-        else if (lower.size() == higher.size())
-        {
-            if (number < median)
-            {
-                lower.push(number);
-                // median = (double)lower.top();
-            }
-            else
-            {
-                higher.push(number);
-                // median = (double)higher.top();
-            }
-        }
-        else
-        {
-            if (number > median)
-            {
-                lower.push(higher.top());
-                higher.pop();
-                higher.push(number);
-            }
-            else
-            {
-                lower.push(number);
-            }
-            median = (lower.top() + higher.top()) / 2;
+            lower.push(higher.top());
+            higher.pop();
         }
     }
 
